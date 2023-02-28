@@ -1,0 +1,19 @@
+{
+	"name": "CosmosDbMongoDb1",
+	"properties": {
+		"annotations": [],
+		"type": "CosmosDbMongoDbApi",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "cosmos"
+			},
+			"database": "learn",
+			"isServerVersionAbove32": true
+		}
+	}
+}
