@@ -134,7 +134,7 @@
 							"typeProperties": {
 								"variableName": "data",
 								"value": {
-									"value": "@string(activity('GET_Data').output.data[0])",
+									"value": "@string(activity('GET_Data').output.data)",
 									"type": "Expression"
 								}
 							}
