@@ -1,0 +1,35 @@
+{
+	"name": "Json_op",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"file_name": {
+				"type": "Int",
+				"defaultValue": 0
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
+				"fileSystem": "api"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"dummy": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
