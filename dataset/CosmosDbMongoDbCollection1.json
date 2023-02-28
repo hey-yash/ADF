@@ -1,0 +1,23 @@
+{
+	"name": "CosmosDbMongoDbCollection1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CosmosDbMongoDb1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"coll_name": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "CosmosDbMongoDbApiCollection",
+		"schema": [],
+		"typeProperties": {
+			"collection": {
+				"value": "@dataset().coll_name",
+				"type": "Expression"
+			}
+		}
+	}
+}
